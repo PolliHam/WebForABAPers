@@ -1,0 +1,145 @@
+@media screen and (max-width: 1920px){
+    .container {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;   
+    }
+
+    .item1 {
+        flex-basis: 35%;
+        height: 100px;
+        background-color: red;
+        margin: 10px;
+    }
+
+    .item2 {
+        flex-basis: 60%;
+        height: 100px;
+        background-color: orange;
+        margin: 10px;
+    }
+
+    .item3 {
+        flex-basis: 100%;
+        height: 300px;
+        background-color: green;
+        margin: 10px;
+    }
+
+    .item4 {
+        flex-basis: 30%;
+        height: 150px;
+        background-color: brown;
+        margin: 10px;
+    }
+
+    .item5 {
+        flex-basis: 30%;
+        height: 150px;
+        background-color: blue;
+        margin: 10px;
+    }
+
+    .item6 {
+        flex-basis: 30%;
+        height: 150px;
+        background-color: blueviolet;
+        margin: 10px;
+    }
+
+}
+
+@media screen and (max-width: 1024px){
+    .container {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .item1 {
+        flex-basis: 35%;
+        height: 100px;
+        background-color: orange;
+        margin: 10px;
+    }
+
+    .item2 {
+        flex-basis: 55%;
+        height: 100px;
+        background-color: blueviolet;
+        margin: 10px;
+    }
+
+    .item3 {
+        flex-basis: 100%;
+        height: 300px;
+        background-color: red;
+        margin: 10px;
+    }
+
+    .item4 {
+        flex-basis: 45%;
+        height: 100px;
+        background-color: green;
+        margin: 10px;
+    }
+
+    .item5 {
+        flex-basis: 45%;
+        height: 100px;
+        background-color: blue;
+        margin: 10px;
+    }
+
+    .item6 {
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 415px){
+    .container {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+    }
+
+    .item1 {
+        flex-basis: 100%;
+        height: 100px;
+        background-color: green;
+        margin: 10px;
+    }
+
+    .item2 {
+        flex-basis: 100%;
+        height: 100px;
+        background-color: blueviolet;
+        margin: 5px;
+    }
+
+    .item3 {
+        flex-basis: 100%;
+        height: 300px;
+        background-color: red;
+        margin: 10px;
+    }
+
+    .item4 {
+        display: none;
+    }
+
+    .item5 {
+        display: none;
+    }
+
+    .item6 {
+        display: none;
+    }
+
+}

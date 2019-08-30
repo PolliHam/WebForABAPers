@@ -1,0 +1,40 @@
+body {
+    font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+
+#main {
+    position:absolute;
+    height: 500px;
+    width: 500px;
+    border: solid;
+    margin: 2% 30%;
+}
+
+
+.item {
+    width: 50%;
+    height: 50%;
+}
+
+#red {
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: red;
+}
+
+#blue {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: blue;
+}
+
+#green {
+    z-index: 1;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    background-color:#04ff04;
+}
