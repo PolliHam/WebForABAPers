@@ -1,12 +1,15 @@
-var Accaunt = function(numbserID, typeContibution, pin, balance, dataCreate, userName, typeUser) 
+var Account = function(numbserID, typeContibution, pin, balance, userName, typeUser) 
 {
     this.numbserID = numbserID;
     this.typeContibution = typeContibution;
     this.pin = pin;
     this.balance = balance;
-    this.dataCreate = dataCreate;
+    this.dateCreate = new Date().toLocaleDateString();
     this.userName = userName;
     this.typeUser = typeUser;
+
+
+    
 
     ///////////////////////////////////
     this.getNumberID = function () {
@@ -48,8 +51,8 @@ var Accaunt = function(numbserID, typeContibution, pin, balance, dataCreate, use
     }
 
     ////////////////////////////////////
-    this.getDataCreate = function() {
-        let str = "Data of accaunt creation: " + this.dataCreate.getDay + "/" + this.dataCreate.getMonth + "/" + this.dataCreate.getFullYear;
+    this.getDateCreate = function() {
+        let str = "Date of account creation: " + this.dateCreate;
         return str;
     }
 
@@ -64,7 +67,7 @@ var Accaunt = function(numbserID, typeContibution, pin, balance, dataCreate, use
     } 
 }
 
-Accaunt.prototype.setUserName = function(newUserName) {
+Account.prototype.setUserName = function(newUserName) {
     if(!newUserName.isEmpty) {
         this.userName = newUserName;
     } else {
@@ -73,8 +76,8 @@ Accaunt.prototype.setUserName = function(newUserName) {
 }
 
 
-var SavingAccaunt = function (procent) {
-    Accaunt.apply(this, arguments);
+var SavingAccount = function (procent) {
+    Account.apply(this, arguments);
     this.procent = procent;
 
     this.getProcent = function () {
@@ -86,8 +89,8 @@ var SavingAccaunt = function (procent) {
     }
 }
 
-var CurrenAccaunt =  function () {
-    Accaunt.apply(this, arguments);
+var CurrenAccount =  function () {
+    Account.apply(this, arguments);
 
     this.withdrawMoney = function (summ) {
         if( this.balance-summ > 0 && summ>0){
@@ -109,27 +112,29 @@ var CurrenAccaunt =  function () {
 }
 
 
-SavingAccaunt.prototype = Object.create(Accaunt.prototype);
-CurrenAccaunt.prototype = Object.create(Accaunt.prototype);
+SavingAccount.prototype = Object.create(Account.prototype);
+CurrenAccount.prototype = Object.create(Account.prototype);
 
-SavingAccaunt.prototype.constructor = SavingAccaunt;
-CurrenAccaunt.prototype.constructor = CurrenAccaunt;
+SavingAccount.prototype.constructor = SavingAccount;
+CurrenAccount.prototype.constructor = CurrenAccount;
 
 
-SavingAccaunt.prototype.setProcent = function(balance) {
+SavingAccount.prototype.setProcent = function(balance) {
     this.procent = balance * 0.2 + balance;
 }
 
 
-var accaunt =  new Accaunt(1, 1, 1122, 30, Date.now(), "Fill", "active");
-var savingAcc =  new SavingAccaunt(15);
-var currenAcc = new CurrenAccaunt(30);
+var account =  new Account(1, 1, 1122, 30,  "Fill", "active");
+var savingAcc =  new SavingAccount(15);
+var currenAcc = new CurrenAccount();
 
-accaunt.setUserName("David");
-console.log(accaunt);
-console.log(accaunt.getNumberID());
-console.log(accaunt.getDataCreate());
-console.log(accaunt.getTypeContibution());
+
+
+account.setUserName("David");
+console.log(account);
+console.log(account.getNumberID());
+console.log(account.getDateCreate());
+console.log(account.getTypeContibution());
 
 
 savingAcc.setUserName("Sam");
@@ -144,3 +149,4 @@ currenAcc.AddMoney(20);
 console.log(currenAcc.getBalance());
 currenAcc.withdrawMoney(10);
 console.log(currenAcc.getBalance());
+
