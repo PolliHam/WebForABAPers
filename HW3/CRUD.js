@@ -121,7 +121,7 @@ function onDelete(ev) {
 function parseAccountToTableRow(Accounts){
     var row=document.createElement('tr');
 
-    id=document.createElement('th');
+    id=document.createElement('td');
     id.innerText=Accounts['id'];
     row.appendChild(id);
 
