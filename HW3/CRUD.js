@@ -80,7 +80,6 @@ function onPrepareUpdate(ev){
 function onUpdate(ev) {
     ev.preventDefault();
 
-   
     var data =
      JSON.stringify({
          "userName": String(document.getElementById("userName1").value),
@@ -157,20 +156,10 @@ function parseAccountToTableRow(Accounts){
 
 (function () {
   
-    document.getElementById('cbutton').addEventListener(
-        'click', onCreate
-    );
-    document.getElementById('rbutton').addEventListener(
-        'click', onRead
-    );
-    document.getElementById('ubutton').addEventListener(
-        'click', onUpdate
-    );
-    document.getElementById('pubutton').addEventListener(
-        'click', onPrepareUpdate
-    );
-    document.getElementById('dbutton').addEventListener(
-        'click', onDelete
-    );
+    document.getElementById('cbutton').addEventListener('click', onCreate);
+    document.getElementById('rbutton').addEventListener('click', onRead);
+    document.getElementById('ubutton').addEventListener('click', onUpdate);
+    document.getElementById('pubutton').addEventListener('click', onPrepareUpdate);
+    document.getElementById('dbutton').addEventListener('click', onDelete);
     console.log('Handlers is set')
 })()
